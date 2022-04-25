@@ -1,8 +1,73 @@
-<title>Hacked by Solo</title>
-<h1>Hacked by Solo</h1>
-<p>Send 0.05 XMR to this address</p>
-<p>8AYah2FcEqjcYS4CrnNqhG7NGCoPv5cDiTED7F7AT9cYPacJoAmo6g3M1QjPLm6Y22hzEg5Sc7jDdADfjdNqccGJFScrgmS</p>
-<p>And I won't do this again</p>
-<p>(and point out where's vulnerable, sure)</p>
-<p>(and index.php's been backed up, thanks me now)</p>
-<p>(and ALL DATA OF THIS SCHOOL's been backed up too)</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>稻学网</title>
+    <script>
+      function G(id, element = document){
+        return element.getElementById(id);
+      }
+      function loadPage(page){
+        let ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function (){
+          if(ajax.readyState == 4 && ajax.status == 200){
+            G("page").innerHTML = ajax.responseText;
+          }
+        }
+        ajax.open("GET",page,true);
+        ajax.send();
+      }
+      function loadSuz(summarization){
+        let ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function (){
+          if(ajax.readyState == 4 && ajax.status == 200){
+            G("suz").innerHTML = ajax.responseText;
+          }
+        }
+        ajax.open("GET",summarization,true);
+        ajax.send();
+      }
+    </script>
+    <style>
+      p{
+        border-radius: 5px;
+        width: 600px;
+        border: 1px solid black;
+        background: #70aa1f;
+        color: white;
+      }
+      #suz p {
+        background: grey;
+      }
+      pre{
+        font-family: normal;
+      }
+      a{
+        color: rgb(241, 53, 179);
+      }
+      #list a{
+        color: rgb(0, 225, 255)
+      }
+      div{
+        float: left;
+      }
+      img{
+        max-width: 550px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      本网站与国内主流观点不一致，可能会读者的价值观产生影响。请保持理性、客观，持批判的态度阅读。<br>
+      本网站记载历史资料大部分有据可循，请善用搜索引擎搜索关键词。<br>
+      建议将浏览器最大化观看。<br>
+      站长邮箱：shitcake@outlook.de，欢迎致信参与编辑或勘误。<br>
+    </p>
+    <div id="list">
+      <a href="#" onclick="loadPage('快速入门.html')">快速入门</a><br>
+      <a href="#" onclick="loadPage('历史资料/历史资料.html')">历史资料</a>
+    </div>
+    <div id="page"></div>
+    <div id="suz"></div>
+  </body>
+</html>
